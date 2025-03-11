@@ -1,7 +1,7 @@
-import { ObjectID } from 'mongodb';
+import { type ObjectId } from 'mongodb';
 
 export interface Badge {
-  _id: ObjectID | string;
+  _id: ObjectId | string;
   name: string;
   displayName: string;
   infoUrl: string;
@@ -9,10 +9,10 @@ export interface Badge {
   description: string;
 }
 export interface UserBadgeMap {
-  _id: ObjectID;
-  user: ObjectID;
-  post: ObjectID;
-  badge: ObjectID | Badge;
+  _id: ObjectId;
+  user: ObjectId;
+  post: ObjectId;
+  badge: ObjectId | Badge;
   metaData?: object;
   isActive: boolean;
   assignedOn: Date;

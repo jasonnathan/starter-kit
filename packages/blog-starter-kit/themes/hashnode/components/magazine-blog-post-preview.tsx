@@ -33,7 +33,7 @@ function BlogPostPreview(props: {
         onMouseOver={preload}
         onFocus={() => undefined}
         aria-label={`Cover photo of the article titled ${post.title}`}
-        className="mb-4 block w-full overflow-hidden rounded-lg border bg-slate-100 hover:opacity-90 dark:border-slate-800 dark:bg-slate-800"
+        className="mb-4 block w-full overflow-hidden rounded-lg border bg-slate-100 hover:opacity-90 dark:border-slate-800 dark:bg-zinc-950"
       >
         <CustomImage
           className="blog-article-card-cover block w-full"

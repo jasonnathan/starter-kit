@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-
-import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
 import { twJoin } from 'tailwind-merge';
 import { ChevronDownSVG_16x16, ChevronRightSVG_16x16, ChevronUpSVG_16x16 } from './icons/svgs';
 import { useTocModalStore } from './toc-sheet';
+import CustomImage from './custom-image';
 
 interface TocRowProps {
 	children: React.ReactNode;
@@ -162,11 +161,11 @@ const TocRenderDesign = (props: TocRenderDesignProps) => {
 
 		setIsOverflowing(shouldShowMoreOption);
 		setTocFullVisibility(!hasEnoughItems || hideShowMoreOption === true);
-	}, []);
+	}, [hideShowMoreOption, list]);
 	return (
 		<div
 			className={twJoin(
-				'relative mb-10 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 pt-0 dark:border-slate-800 dark:bg-slate-900',
+				'relative mb-10 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 pt-0 dark:border-slate-800 dark:bg-neutral-900',
 				modal && 'mb-0 rounded-none border-none px-0 py-4',
 			)}
 			ref={tocContainerRef}
@@ -184,10 +183,10 @@ const TocRenderDesign = (props: TocRenderDesignProps) => {
 				{list?.length === 0 ? (
 					<div className="flex h-[388px] flex-col items-center justify-center gap-2">
 						<div className="relative h-[110px] w-[110px]">
-							<Image
+							<CustomImage
+								originalSrc="https://cdn.hashnode.com/res/hashnode/image/upload/v1686858363512/7ad376cf-1646-4bd4-b74c-25cf8f47238b.png"
 								src="https://cdn.hashnode.com/res/hashnode/image/upload/v1686858363512/7ad376cf-1646-4bd4-b74c-25cf8f47238b.png"
 								alt="No heading"
-								layout="fill"
 							/>
 						</div>
 						<h3 className="text-center text-sm text-slate-700">

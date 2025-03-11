@@ -84,7 +84,7 @@ export default function Series({
 									<span className="blog-series-label mb-2 font-semibold uppercase tracking-tight text-slate-600 dark:text-slate-400">
 										Series
 									</span>
-									<h1 className="blog-series-title font-heading mb-2 text-3xl font-bold text-slate-900 dark:text-white md:text-4xl xl:text-5xl">
+									<h1 className="blog-series-title font-heading mb-2 text-3xl font-bold text-slate-900 dark:text-white md:text-3xl xl:text-4xl">
 										{series.name}
 									</h1>
 									{series.description?.html && (
@@ -130,7 +130,7 @@ export default function Series({
 						{posts.length > 0 && (
 							<div className="my-10 flex flex-col items-center justify-center">
 								<hr className="w-full border-t dark:border-slate-800" />
-								<p className="-mt-5 bg-white p-2 font-medium text-slate-600 dark:bg-slate-900 dark:text-slate-400">
+								<p className="-mt-5 bg-white p-2 font-medium text-slate-600 dark:bg-neutral-900 dark:text-slate-400">
 									Articles in this series
 								</p>
 							</div>

@@ -147,7 +147,7 @@ export const PostHeader = ({ post, morePosts }: Props) => {
 					{/* Article title */}
 					<div
 						className={twJoin(
-							`font-heading mt-6 break-words px-4 text-center text-3xl font-extrabold text-slate-900 dark:text-white md:mt-10 md:px-5 md:text-4xl lg:px-8 xl:px-20 xl:text-5xl`,
+							`font-heading mt-6 break-words px-4 text-center text-3xl font-extrabold text-slate-900 dark:text-white md:mt-10 md:px-5 md:text-3xl lg:px-8 xl:px-20 xl:text-4xl`,
 							post.subtitle ? `mb-5` : `mb-8 md:mb-14`,
 						)}
 					>

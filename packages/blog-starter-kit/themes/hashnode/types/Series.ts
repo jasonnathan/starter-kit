@@ -1,8 +1,8 @@
-import { ObjectID } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import { PostPreview, User, Publication } from './index';
 
 export interface Series {
-  _id: ObjectID;
+  _id: ObjectId;
   cuid?: string;
   slug?: string;
   name?: string;
@@ -18,6 +18,6 @@ export interface Series {
   isActive?: boolean;
   sortOrder?: 'asc' | 'dsc';
   partOfPublication?: boolean;
-  publication?: Publication | string | ObjectID;
+  publication?: Publication | string | ObjectId;
   movedToBlog?: boolean;
 }

@@ -1,26 +1,28 @@
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { Spectral, Lora } from 'next/font/google';
 
-const inter = Inter({
+const spectral = Spectral({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-spectral',
   display: 'swap',
+  weight: ['400', '600', '700'],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const lora = Lora({
   subsets: ['latin'],
-  variable: '--font-plus-jakarta-sans',
+  variable: '--font-lora',
   display: 'swap',
+  weight: ['400', '600', '700'],
 });
 
 const variableConstant = 'variable';
-const fontInterVar = inter.variable.replace(variableConstant, 'Inter');
-const fontPlusJakartaSansVar = plusJakartaSans.variable.replace(variableConstant, 'Plus_Jakarta_Sans');
+const fontSpectralVar = spectral.variable.replace(variableConstant, 'Spectral');
+const fontLoraVar = lora.variable.replace(variableConstant, 'Lora');
 
 export const GlobalFontVariables = () => (
   <style jsx global>{`
     html {
-      --font-inter: ${fontInterVar};
-      --font-plus-jakarta-sans: ${fontPlusJakartaSansVar};
+      --font-spectral: ${fontSpectralVar};
+      --font-lora: ${fontLoraVar};
     }
   `}</style>
 );

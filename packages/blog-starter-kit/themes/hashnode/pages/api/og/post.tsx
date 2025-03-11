@@ -56,11 +56,11 @@ export default async function handler(req: NextRequest) {
 	}
 
 	if (title.length <= 79) {
-		titleTailwindClass = 'text-7xl';
-	} else if (title.length > 79 && title.length <= 109) {
-		titleTailwindClass = 'text-6xl';
-	} else {
 		titleTailwindClass = 'text-5xl';
+	} else if (title.length > 79 && title.length <= 109) {
+		titleTailwindClass = 'text-4xl';
+	} else {
+		titleTailwindClass = 'text-3xl';
 	}
 
 	return new ImageResponse(

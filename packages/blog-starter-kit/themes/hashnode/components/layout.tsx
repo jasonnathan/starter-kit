@@ -1,4 +1,4 @@
-import { Analytics } from './analytics';
+import { useAnalytics } from './useAnalytics';
 import { Integrations } from './integrations';
 import { Meta } from './meta';
 import { Scripts } from './scripts';
@@ -8,14 +8,14 @@ type Props = {
 };
 
 export const Layout = ({ children }: Props) => {
+	useAnalytics();
 	return (
 		<>
 			<Meta />
 			<Scripts />
-			<div className="min-h-screen bg-white dark:bg-neutral-950">
+			<div className="min-h-screen bg-white dark:bg-neutral-900">
 				<main>{children}</main>
 			</div>
-			<Analytics />
 			<Integrations />
 		</>
 	);

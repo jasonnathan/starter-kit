@@ -87,7 +87,7 @@ export default async function handler(req: NextRequest) {
 								{/* Either show the Site title below or Site logo depending on whether a blog has a logo or not */}
 
 								{/* Site title */}
-								{!logo && title && <p tw="m-0 text-5xl font-bold">{title}</p>}
+								{!logo && title && <p tw="m-0 text-4xl font-bold">{title}</p>}
 
 								{/* Site Logo - load dark logo only if the site is set to open in dark mode */}
 								{logo ? (
@@ -150,7 +150,7 @@ export default async function handler(req: NextRequest) {
 								{/* Either show the Site title below or Site logo depending on whether a blog has a logo or not */}
 
 								{/* Site title */}
-								{!logo && title && <p tw="m-0 text-5xl font-bold">{title}</p>}
+								{!logo && title && <p tw="m-0 text-4xl font-bold">{title}</p>}
 
 								{/* Site Logo */}
 								{logo ? <img tw="mb-10 block w-1/2" alt="name" src={logo} /> : null}

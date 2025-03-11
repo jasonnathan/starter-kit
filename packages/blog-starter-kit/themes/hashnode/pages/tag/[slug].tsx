@@ -8,7 +8,7 @@ import { AppProvider } from '../../components/contexts/appContext';
 import { Header } from '../../components/header';
 import { Layout } from '../../components/layout';
 import {
-	Post,
+	type Post,
 	PublicationFragment,
 	TagInitialDocument,
 	TagInitialQuery,
@@ -90,7 +90,7 @@ export default function Post({ publication, posts, tag, slug, currentMenuId }: P
 					{posts.edges.length > 0 && (
 						<div className="my-10 flex flex-col items-center justify-center">
 						<hr className="w-full border-t dark:border-slate-800" />
-						<p className="-mt-5 bg-white p-2 font-medium text-slate-600 dark:bg-slate-900 dark:text-slate-400">
+						<p className="-mt-5 bg-white p-2 font-medium text-slate-600 dark:bg-neutral-900 dark:text-slate-400">
 							Articles with this tag
 						</p>
 						</div>

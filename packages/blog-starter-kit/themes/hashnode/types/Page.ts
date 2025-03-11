@@ -1,9 +1,9 @@
-import { ObjectID } from 'mongodb';
+import { type ObjectId } from 'mongodb';
 import { Publication } from './index';
 
 export interface Page {
-  _id: string | ObjectID;
-  publication?: string | Publication | ObjectID;
+  _id: string | ObjectId;
+  publication?: string | Publication | ObjectId;
   title?: string;
   endpoint?: string;
   content?: string;

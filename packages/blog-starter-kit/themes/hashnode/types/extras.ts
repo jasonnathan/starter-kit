@@ -1,4 +1,4 @@
-import { ObjectID } from 'mongodb';
+import { type ObjectId } from 'mongodb';
 
 export interface SocialMedia {
   website?: string;
@@ -10,7 +10,7 @@ export interface SocialMedia {
 }
 
 export interface Reaction {
-  _id: ObjectID;
+  _id: ObjectId;
   name: string;
   image: string;
 }
@@ -21,12 +21,12 @@ export type Node = {
 };
 
 export interface Tag {
-  _id: ObjectID;
+  _id: ObjectId;
   name: string;
   slug: string;
   isActive: boolean;
   isApproved: boolean;
-  mergedWith?: Tag | ObjectID;
+  mergedWith?: Tag | ObjectId;
   numPosts?: number;
 }
 

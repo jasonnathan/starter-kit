@@ -1,8 +1,8 @@
-import { ObjectID } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import { SocialMedia, PostPreview } from './index';
 
 export interface User {
-  _id: ObjectID;
+  _id: ObjectId;
   isAmbassador: boolean;
   hasGoldRing: boolean;
   hasBetaAccess: boolean;

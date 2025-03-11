@@ -1,4 +1,4 @@
-import { ObjectID } from 'mongodb';
+import { ObjectId } from 'mongodb';
 
 import { PublicationType, User, Publication, Series, Tag, Response, Badge, Nullish } from '../types/index';
 
@@ -10,11 +10,11 @@ export type TocType = {
 };
 
 export interface PostPreview {
-  _id: ObjectID;
+  _id: ObjectId;
   partOfPublication: boolean;
   author: Pick<User, '_id' | 'name' | 'photo' | 'username' | 'socialMedia' | 'isDeactivated' | 'bio'>;
   bookmarkedIn: string[];
-  publication: ObjectID | Publication;
+  publication: ObjectId | Publication;
   tags: Tag[];
   responseCount: number;
   replyCount: number;

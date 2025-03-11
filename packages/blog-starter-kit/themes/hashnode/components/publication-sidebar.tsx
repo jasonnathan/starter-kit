@@ -38,7 +38,7 @@ function PublicationSidebar(props: Props) {
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay
           className={twJoin(
-            'fixed inset-0 z-50 bg-slate-900 opacity-0 transition-opacity duration-300 ease-out dark:bg-slate-600 ',
+            'fixed inset-0 z-50 bg-neutral-900 opacity-0 transition-opacity duration-300 ease-out dark:bg-neutral-900 ',
             isMounted && 'opacity-50',
           )}
         />
@@ -54,14 +54,14 @@ function PublicationSidebar(props: Props) {
             toggleSidebar();
           }}
           className={twJoin(
-            'fixed bottom-0 left-0 top-0 z-50 flex w-80 transform flex-col border-slate-200 bg-white text-black shadow-2xl duration-300 ease-out dark:border-slate-800 dark:bg-slate-900 dark:text-white',
+            'fixed bottom-0 left-0 top-0 z-50 flex w-80 transform flex-col border-slate-200 bg-white text-black shadow-2xl duration-300 ease-out dark:border-slate-800 dark:bg-black dark:text-white',
             // When the sheet is mounted, we want to slide it in from the left.
             !isMounted ? '-translate-x-96' : 'translate-x-0',
           )}
         >
           <div
             ref={sidebarHeaderRef}
-            className="blog-sidebar-header w-full shrink-0 bg-white py-6 dark:bg-slate-900"
+            className="blog-sidebar-header w-full shrink-0 bg-white py-6 dark:bg-neutral-900"
           >
             <div
               className={twJoin(

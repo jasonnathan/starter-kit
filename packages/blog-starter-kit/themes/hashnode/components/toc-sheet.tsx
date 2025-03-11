@@ -58,11 +58,11 @@ function TocSheet({ list }: { list: any[] }) {
           <DialogPrimitive.Portal>
             <DialogPrimitive.Overlay
               onClick={closeModal}
-              className="fixed inset-0 z-50 bg-slate-900 opacity-50 transition-opacity duration-300 ease-out dark:bg-slate-600"
+              className="fixed inset-0 z-50 bg-neutral-900 opacity-50 transition-opacity duration-300 ease-out dark:bg-slate-600"
             />
             <DialogPrimitive.Content
               className={`
-                fixed bottom-0 left-0 right-0 z-50 flex h-fc max-w-[1200px] flex-col items-center overflow-hidden rounded-2xl rounded-bl-none rounded-br-none border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 md:top-50 md:left-50 md:w-[40rem] md:-translate-x-1/2 md:-translate-y-1/2 md:rounded-bl-2xl md:rounded-br-2xl lg:w-[40rem]`}
+                fixed bottom-0 left-0 right-0 z-50 flex h-fc max-w-[1200px] flex-col items-center overflow-hidden rounded-2xl rounded-bl-none rounded-br-none border border-slate-200 bg-white dark:border-slate-800 dark:bg-neutral-900 md:top-50 md:left-50 md:w-[40rem] md:-translate-x-1/2 md:-translate-y-1/2 md:rounded-bl-2xl md:rounded-br-2xl lg:w-[40rem]`}
               onEscapeKeyDown={closeModal}
             >
               <>

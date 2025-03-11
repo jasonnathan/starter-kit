@@ -1,5 +1,4 @@
 import moment from 'dayjs';
-import Image from 'next/legacy/image';
 import Link from 'next/link';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { twJoin } from 'tailwind-merge';
@@ -83,7 +82,7 @@ function BlogPostPreview(props: {
                   href={`https://hashnode.com/@${post.author.username}`}
                   className="blog-post-card-author-pic mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"
                 >
-                  <Image
+                  <img
                     alt={post.author.name}
                     className="block w-full"
                     width={72}

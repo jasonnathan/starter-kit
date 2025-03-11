@@ -42,14 +42,16 @@ class ProgressiveImage extends React.Component<{
     if (!src || src.trim().length === 0) return null;
 
     const resizedImage = resizeImage(src, resize);
-
+    {/* eslint-disable-next-line @next/next/no-img-element */}
     return (
       <img
         data-sizes="auto"
         loading="lazy"
         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
         // eslint-disable-next-line no-return-assign
-        ref={(c) => (this.image = c || null)}
+        ref={(c) => {
+          this.image = c || null;
+        }}
         data-src={resizedImage}
         width={resize.w}
         height={resize.h}

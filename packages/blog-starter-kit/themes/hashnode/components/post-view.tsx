@@ -58,12 +58,12 @@ function PostView(props: any) {
                     src={resizeImage(post.coverImage, {
                         w: 1600,
                         h: 840,
-                        ...(!post.coverImage?.isPortrait ?? false ? { c: 'thumb' } : { fill: 'blur' }),
+                        ...(!post.coverImage?.isPortrait || false ? { c: 'thumb' } : { fill: 'blur' }),
                     })}
                     blurDataURL={getBlurHash(
                         resizeImage(post.coverImage, {
                         ...blurImageDimensions,
-                        ...(!post.coverImage?.isPortrait ?? false ? { c: 'thumb' } : { fill: 'blur' }),
+                        ...(!post.coverImage?.isPortrait || false ? { c: 'thumb' } : { fill: 'blur' }),
                         }),
                     )}
                     width={1600}
@@ -78,7 +78,7 @@ function PostView(props: any) {
                 {/* Article title */}
                 <div
                 className={twJoin(
-                    `mt-6 break-words px-4 text-center font-heading text-3xl font-extrabold text-slate-900 dark:text-white md:mt-10 md:px-5 md:text-4xl lg:px-8 xl:px-20 xl:text-5xl`,
+                    `mt-6 break-words px-4 text-center font-heading text-3xl font-extrabold text-slate-900 dark:text-white md:mt-10 md:px-5 md:text-3xl lg:px-8 xl:px-20 xl:text-4xl`,
                     post.subtitle ? `mb-5` : `mb-8 md:mb-14`,
                 )}
                 >
@@ -137,12 +137,12 @@ function PostView(props: any) {
                     src={resizeImage(post.coverImage, {
                         w: 1600,
                         h: 840,
-                        ...(!post.coverImage?.isPortrait ?? false ? { c: 'thumb' } : { fill: 'blur' }),
+                        ...(!post.coverImage?.isPortrait || false ? { c: 'thumb' } : { fill: 'blur' }),
                     })}
                     blurDataURL={getBlurHash(
                         resizeImage(post.coverImage, {
                         ...blurImageDimensions,
-                        ...(!post.coverImage?.isPortrait ?? false ? { c: 'thumb' } : { fill: 'blur' }),
+                        ...(!post.coverImage?.isPortrait || false ? { c: 'thumb' } : { fill: 'blur' }),
                         }),
                     )}
                     width={1600}

@@ -95,7 +95,7 @@ const Page = ({ page }: PageProps) => {
 			<Head>
 				<title>{title}</title>
 			</Head>
-			<div className="blog-page-area mx-auto min-h-screen px-4 py-8 md:w-2/3 md:p-10">
+			<div className="blog-page-area mx-auto min-h-screen bg-white dark:bg-zinc-950 px-4 py-8 md:w-2/3 md:p-10">
 				<StaticPageContent pageContent={page} />
 			</div>
 		</>
@@ -120,7 +120,7 @@ export default function PostOrPage(props: Props) {
 							'blog-header',
 							'z-50 w-full border-b',
 							navPositionStyles,
-							'border-black/10 bg-white bg-opacity-70 dark:border-white/10 dark:bg-slate-900 dark:bg-opacity-70',
+							'border-black/10 bg-white bg-opacity-70 dark:border-white/10 dark:bg-neutral-900 dark:bg-opacity-70',
 						)}
 					>
 						<PostPageNavbar publication={publication} ref={headerRef} />

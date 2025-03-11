@@ -19,24 +19,24 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
-			"*":{
+			"*": {
 				WebkitFontSmoothing: 'antialiased',
 				MozOsxFontSmoothing: 'grayscale',
 				textRendering: 'optimizeLegibility',
 			},
 			fontFamily: {
-				sans: [...defaultTheme.fontFamily.sans], // Keep default sans-serif for UI elements
-				heading: [fontSpectralVar, ...defaultTheme.fontFamily.serif], // Spectral for headings
-				body: [fontLoraVar, ...defaultTheme.fontFamily.serif], // Lora for body text
+				sans: [fontSpectralVar, ...defaultTheme.fontFamily.sans], // Keep default sans-serif for UI elements
+				heading: [fontLoraVar, ...defaultTheme.fontFamily.serif], // Spectral for headings
+				body: [fontSpectralVar, ...defaultTheme.fontFamily.serif], // Lora for body text
 			},
 			colors: {
-        'geekist-dark': '#090909',  // Custom dark background
-        'geekist-gold': '#FFDE59',  // Brand gold
-        'primary': '#2563eb',       // Better blue (blue-600)
-        'cyan': '#06b6d4',          // Softer cyan (cyan-500)
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
+				'geekist-dark': '#090909',  // Custom dark background
+				'geekist-gold': '#FFDE59',  // Brand gold
+				'primary': '#2563eb',       // Better blue (blue-600)
+				'cyan': '#06b6d4',          // Softer cyan (cyan-500)
+				'accent-1': '#FAFAFA',
+				'accent-2': '#EAEAEA',
+				'accent-7': '#333',
 			},
 			typography: () => ({
 				DEFAULT: {
@@ -150,30 +150,13 @@ module.exports = {
 						'blockquote p:last-of-type::after': {
 							content: '""',
 						},
-						h1: {
-							fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`,
-							...headings,
-						},
-						h2: {
-							fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`,
-							...headings,
-						},
-						h3: {
-							fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`,
-							...headings,
-						},
-						h4: {
-							fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`,
-							...headings,
-						},
-						h5: {
-							fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`,
-							...headings,
-						},
-						h6: {
-							fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`,
-							...headings,
-						},
+						h1: { fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`, ...headings },
+						h2: { fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`, ...headings },
+						h3: { fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`, ...headings },
+						h4: { fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`, ...headings },
+						h5: { fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`, ...headings },
+						h6: { fontFamily: `${[fontLoraVar, ...defaultTheme.fontFamily.sans]}`, ...headings },
+						
 						td: {
 							border: '1px solid rgb(226 232 240 / 80%)',
 						},
@@ -186,19 +169,18 @@ module.exports = {
 						thead: {
 							fontWeight: 600,
 						},
-						p: {
-							fontFamily: `${fontSpectralVar}, serif`, // Lora for paragraphs
+						p: { 
+							fontFamily: `${fontSpectralVar}, serif`,
 							fontWeight: '400',
-							textShadow: 'none !important',
-							letterSpacing: 'normal', // Slightly increased letter spacing
-							lineHeight: '1.6em', // Reduced line height for tighter paragraphs					
-						},		
+							letterSpacing: 'normal',
+							lineHeight: '1.6em',
+						},
 						a: {
 							textDecoration: 'underline',
-							textUnderlineOffset: '3px', // Adjusts space between text and underline
-							textDecorationThickness: '1px', // Makes the underline thinner
-							textDecorationColor: 'rgba(255, 255, 255, 0.5)', // Softer white for contrast
-						},				
+							textUnderlineOffset: '3px',
+							textDecorationThickness: '1px',
+							textDecorationColor: 'rgba(255, 255, 255, 0.5)',
+						},
 					},
 				},
 				dark: {

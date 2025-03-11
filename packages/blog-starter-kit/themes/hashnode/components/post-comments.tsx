@@ -44,7 +44,7 @@ export const PostComments = () => {
 		return (
 			<div
 				key={comment.id}
-				className="border-b-1/2 bg-white px-4 py-4 dark:border-slate-700 dark:bg-slate-900 md:flex-nowrap"
+				className="border-b-1/2 bg-white px-4 py-4 dark:border-slate-700 dark:bg-neutral-900 md:flex-nowrap"
 			>
 				<div className="flex flex-col">
 					<div className="flex justify-between text-slate-900 dark:text-slate-50">

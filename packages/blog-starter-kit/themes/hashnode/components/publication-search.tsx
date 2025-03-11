@@ -24,7 +24,7 @@ import CustomScrollArea from './scroll-area';
 dayjs.extend(localizedFormat);
 
 const LoadingComponent = () => (
-  <div className="border-b bg-white px-8 py-6 dark:border-slate-800 dark:bg-slate-900">
+  <div className="border-b bg-white px-8 py-6 dark:border-slate-800 dark:bg-neutral-900">
     <div className="mb-2 h-4 w-2/3 rounded-lg bg-slate-200 dark:bg-slate-700" />
     <div className="mb-2 h-4 w-1/3 rounded-lg bg-slate-200 dark:bg-slate-700" />
     <div className="mb-2 h-4 w-1/3 rounded-lg bg-slate-200 dark:bg-slate-700" />
@@ -147,7 +147,7 @@ const PublicationSearch = (props: Props) => {
       <DialogPrimitive.Portal>
         <DialogPrimitive.Overlay
           className={twJoin(
-            'fixed inset-0 z-50 flex flex-row items-start justify-center bg-slate-900 opacity-0 transition-opacity duration-300 ease-out dark:bg-slate-600',
+            'fixed inset-0 z-50 flex flex-row items-start justify-center bg-neutral-900 opacity-0 transition-opacity duration-300 ease-out dark:bg-slate-600',
             isMounted && 'opacity-50',
           )}
         />
@@ -163,7 +163,7 @@ const PublicationSearch = (props: Props) => {
             toggleSearchUI();
           }}
           className={twJoin(
-            'fixed left-0 right-0 top-0 z-50 mx-2 mt-32 flex max-w-[1200px] flex-col items-center overflow-hidden rounded-2xl border-slate-200 bg-white p-6 shadow-md dark:border-slate-800 dark:bg-slate-900 md:mx-8 lg:mx-auto lg:w-3/4 xl:w-2/3',
+            'fixed left-0 right-0 top-0 z-50 mx-2 mt-32 flex max-w-[1200px] flex-col items-center overflow-hidden rounded-2xl border-slate-200 bg-white p-6 shadow-md dark:border-slate-800 dark:bg-neutral-900 md:mx-8 lg:mx-auto lg:w-3/4 xl:w-2/3',
             (isInputEmpty || isResultEmpty) && !isLoading ? 'md:max-h-50 max-h-40' : 'h-2/3',
           )}
         >
@@ -204,7 +204,7 @@ const PublicationSearch = (props: Props) => {
             ) : null}
           </div>
           <CustomScrollArea>
-            <div className="mt-2 rounded-xl bg-white pb-10 dark:bg-slate-900 md:mt-5">
+            <div className="mt-2 rounded-xl bg-white pb-10 dark:bg-neutral-900 md:mt-5">
               {isLoading && isResultEmpty && <SearchResultsLoader count={4} />}
               {shouldRenderResult &&
                 publicationSearchResults.map((item, index: number) => {
@@ -250,7 +250,7 @@ const PublicationSearch = (props: Props) => {
 
                         <div
                           className={twJoin(
-                            'w-full shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-900 md:w-64',
+                            'w-full shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-neutral-900 md:w-64',
                             post.coverImage && post.coverImage.url.includes('cdn.hashnode.com')
                               ? 'border dark:border-slate-800'
                               : '',

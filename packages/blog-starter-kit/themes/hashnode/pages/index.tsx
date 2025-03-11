@@ -1,7 +1,6 @@
 import { InferGetStaticPropsType } from 'next';
 import { WithUrqlProps, initUrqlClient } from 'next-urql';
 import Head from 'next/head';
-import Image from 'next/legacy/image';
 import { useState } from 'react';
 import { twJoin } from 'tailwind-merge';
 import { useQuery } from 'urql';
@@ -25,13 +24,14 @@ import FeaturedPosts from '../components/features-posts';
 import PublicationFooter from '../components/publication-footer';
 import PublicationMeta from '../components/publication-meta';
 import { resizeImage } from '../utils/image';
+import CustomImage from '../components/custom-image';
 
 const REVALIDATION_INTERVAL_POST_VIEWS_ACTIVE = 60 * 60; // 1 hour
 const REVALIDATION_INTERVAL = 60 * 60 * 24 * 30; // 1 month
 
 const NoPostsImage = ({ alt = '' }) => {
 	return (
-		<Image
+		<CustomImage
 			alt={alt}
 			height={500}
 			width={500}
@@ -39,6 +39,7 @@ const NoPostsImage = ({ alt = '' }) => {
 				'https://cdn.hashnode.com/res/hashnode/image/upload/v1625676910594/d1jtXmfQC.png?auto=compress',
 				{ h: 800, w: 800, c: 'thumb' },
 			)}
+			originalSrc="https://cdn.hashnode.com/res/hashnode/image/upload/v1625676910594/d1jtXmfQC.png?auto=compress"
 		/>
 	);
 };
@@ -184,11 +185,10 @@ export default function Index(
 					<PublicationFooter
 						authorName={publication.author.name}
 						title={publication.title}
-						imprint={publication.imprint}
-						disableFooterBranding={publication.preferences.disableFooterBranding}
+						imprint={publication.imprint || 'undefined'}
 						isTeam={publication.isTeam}
 						logo={publication.preferences.logo}
-						darkMode={publication.preferences.darkMode}
+						// darkMode={publication.preferences.darkMode}
 					/>
 				) : null}
 			</Layout>

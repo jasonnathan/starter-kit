@@ -13,7 +13,7 @@ import {
 	DraftByIdQuery,
 	DraftByIdQueryVariables,
 	DraftFragment,
-	Post,
+	type Post,
 	PublicationByHostDocument,
 	PublicationByHostQuery,
 	PublicationByHostQueryVariables,
@@ -78,7 +78,7 @@ export default function Post({ publication, draft }: Props) {
 						'blog-header',
 						'z-50 w-full border-b',
 						navPositionStyles,
-						'border-black/10 bg-white bg-opacity-70 dark:border-white/10 dark:bg-slate-900 dark:bg-opacity-70',
+						'border-black/10 bg-white bg-opacity-70 dark:border-white/10 dark:bg-neutral-900 dark:bg-opacity-70',
 					)}
 					>
 					<PostPageNavbar publication={publication} ref={headerRef} />
@@ -123,7 +123,7 @@ export default function Post({ publication, draft }: Props) {
 									{/* Article title */}
 									<div
 									className={twJoin(
-										`mt-6 break-words px-4 text-center font-heading text-3xl font-extrabold text-slate-900 dark:text-white md:mt-10 md:px-5 md:text-4xl lg:px-8 xl:px-20 xl:text-5xl`,
+										`mt-6 break-words px-4 text-center font-heading text-3xl font-extrabold text-slate-900 dark:text-white md:mt-10 md:px-5 md:text-3xl lg:px-8 xl:px-20 xl:text-4xl`,
 										draft.subtitle ? `mb-5` : `mb-8 md:mb-14`,
 									)}
 									>

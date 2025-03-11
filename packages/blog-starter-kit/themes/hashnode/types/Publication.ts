@@ -1,8 +1,8 @@
-import { ObjectID } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import { User, Page, Nullish, Series } from './index';
 
 export interface PublicationMenu {
-  _id: ObjectID;
+  _id: ObjectId;
   type: string;
   label: string;
   url: string | Nullish;
@@ -23,7 +23,7 @@ export interface PublicationLinks {
 }
 
 export interface Publication {
-  _id: ObjectID;
+  _id: ObjectId;
   title: string;
   author: Pick<User, '_id' | 'name' | 'photo' | 'username'>;
   layout: string;
@@ -105,7 +105,7 @@ export interface Publication {
 }
 
 export type PublicationType = {
-  _id: ObjectID;
+  _id: ObjectId;
   ogImage: string;
   domain: string;
   username: string;

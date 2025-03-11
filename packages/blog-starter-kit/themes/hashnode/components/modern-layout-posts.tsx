@@ -24,7 +24,7 @@ const PublicationPosts = (props: {
   const slicedPosts = edges.map((edge) => edge.node).slice(3);
 
   return (
-    <div className="blog-articles-area mx-auto mt-10 dark:border-slate-800">
+    <div className="blog-articles-area mx-auto pt-10 dark:border-slate-800 bg-zinc-950">
       <div className="blog-articles-container container mx-auto grid grid-cols-1 gap-10 px-4 py-4 md:grid-cols-2 lg:grid-cols-3 xl:py-10 xl:px-10 2xl:px-24 2xl:py-5">
         {slicedPosts.map((post) => (
           <BlogPostPreview key={post.id} post={post} publication={publication} />

@@ -75,7 +75,7 @@ function ResponseList(props: Props) {
 						className="border-b-1/2 animate-pulse dark:border-slate-700"
 					>
 						<div className="px-4 py-5">
-							<div className="mb-6 flex flex-row items-center bg-white dark:border-slate-800 dark:bg-slate-900">
+							<div className="mb-6 flex flex-row items-center bg-white dark:border-slate-800 dark:bg-neutral-900">
 								<div className="mr-4 h-8 w-8 rounded-full bg-slate-200 dark:bg-slate-700" />
 								<div className="flex flex-col gap-2">
 									<div className="h-3 w-56 rounded bg-slate-200 dark:bg-slate-700" />

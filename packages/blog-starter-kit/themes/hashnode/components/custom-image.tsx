@@ -1,53 +1,51 @@
 import { ImgHTMLAttributes } from 'react';
-
-import Image, { ImageProps } from 'next/legacy/image';
+import Image, { ImageProps } from 'next/image';
 
 type Props = {
-  src: any; // can be string or StaticImport of next/image
+  src: string | null; // Ensure it's a string or null
   alt: string;
   originalSrc: string;
+  width?: number;
+  height?: number;
 } & ImgHTMLAttributes<any> &
   ImageProps;
 
 /**
- * Conditionally renders native img for gifs and next/image for other types
- * @param props
- * @returns <img /> or <Image/>
+ * Conditionally renders Next.js Image component for all images.
+ * GIFs are handled using `unoptimized: true` instead of `<img>`.
  */
 function CustomImage(props: Props) {
-  const { originalSrc, ...originalRestOfTheProps } = props;
+  const { originalSrc, width = 100, height = 100, ...restOfTheProps } = props;
   const {
     alt = '',
+    src,
     loader,
     quality,
     priority,
     loading,
-    unoptimized,
-    objectFit,
-    objectPosition,
-    src,
-    width,
-    height,
-    layout,
     placeholder,
     blurDataURL,
-    ...restOfTheProps
-  } = originalRestOfTheProps; // Destructured next/image props on purpose, so that unwanted props don't end up in <img />
+    ...imgProps
+  } = restOfTheProps;
 
-  if (!originalSrc) {
+  // Validate image source
+  if (!originalSrc || typeof originalSrc !== 'string') {
+    console.warn('CustomImage: Invalid or missing image source.');
     return null;
   }
 
-  const isGif = originalSrc.substr(-4) === '.gif';
-  const isHashnodeCDNImage = src.indexOf('cdn.hashnode.com') > -1;
+  const isGif = originalSrc.endsWith('.gif');
 
-  if (isGif || !isHashnodeCDNImage) {
-    // restOfTheProps will contain all props excluding the next/image props
-    return <img {...restOfTheProps} alt={alt} src={src || originalSrc} />;
-  }
-
-  // Notes we are passing whole props object here
-  return <Image {...originalRestOfTheProps} src={src || originalSrc} />;
+  return (
+    <Image
+      {...imgProps}
+      src={src || originalSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      unoptimized={isGif}
+    />
+  );
 }
 
 export default CustomImage;

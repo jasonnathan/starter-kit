@@ -1,5 +1,4 @@
 import cuid from 'cuid';
-import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { twJoin } from 'tailwind-merge';
 
@@ -78,7 +77,7 @@ const FeaturedPosts = (props: {
               <h1
                 className={twJoin(
                   'blog-article-card-title mx-4 mb-3 block font-heading font-extrabold text-slate-900 hover:opacity-75 dark:text-slate-100',
-                  isFirstPost ? 'text-xl md:text-3xl lg:text-4xl' : 'text-xl',
+                  isFirstPost ? 'text-xl md:text-2xl lg:text-4xl' : 'text-xl',
                 )}
               >
                 <Link href={postURL} onMouseOver={preload(post.slug)} onFocus={() => undefined}>
@@ -102,9 +101,9 @@ const FeaturedPosts = (props: {
               <div className="blog-article-card-author-strip mx-4 flex flex-row flex-wrap items-center">
                 <a
                   href={`https://hashnode.com/@${post.author.username}`}
-                  className="blog-article-card-author-photo mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:border-slate-800 dark:bg-slate-900"
+                  className="blog-article-card-author-photo mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:border-slate-800 dark:bg-neutral-900"
                 >
-                  <Image
+                  <img
                     alt={post.author.name || 'Author'}
                     className="block"
                     width={72}
