@@ -2,3 +2,4 @@ packages:
   - ./packages/**
 onlyBuiltDependencies:
   - '@parcel/watcher'
+  - sharp
